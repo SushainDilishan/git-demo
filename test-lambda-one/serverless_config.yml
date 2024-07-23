@@ -1,0 +1,12 @@
+test-lambda-one-handler:
+  handler: lambda_handler.lambda_handler #handler function
+  name: test-lambda-one  #lambda function name
+  module: test-lambda-one
+  memorySize: 128
+#  environment:
+#    CONFIG: >-
+#      ${ssm:test_lambda_one_env_variable}
+  package:
+    patterns:
+      - '!./**'
+      - './test-lambda-one/**'
